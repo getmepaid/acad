@@ -28,17 +28,16 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
-	admob.initAdmob("ca-app-pub-7251676025279948/7827344712","ca-app-pub-7251676025279948/5792208319");
-	admob.showBanner(admob.BannerSize.BANNER, admob.Position.BOTTOM_APP);
-
 	var inAppBrowserbRef = cordova.InAppBrowser.open('http://www.acadegypt.com', '_self', 'location=no,toolbar=no');
-        //inAppBrowserbRef = cordova.InAppBrowser.open('https://www.ovplatform.tk/el5rog/www/', '_blank', 'location=no,toolbar=no');
+        inAppBrowserbRef = cordova.InAppBrowser.open('http://www.acadegypt.com', '_blank', 'location=no,toolbar=no');
         /*inAppBrowserbRef.addEventListener('loadstart', inAppBrowserbLoadStart);
         inAppBrowserbRef.addEventListener('loadstop', inAppBrowserbLoadStop);
         inAppBrowserbRef.addEventListener('loaderror', inAppBrowserbLoadError);
         inAppBrowserbRef.addEventListener('exit', inAppBrowserbClose);
 	*/
-	
+	admob.initAdmob("ca-app-pub-7251676025279948/7827344712","ca-app-pub-7251676025279948/5792208319");
+	admob.showBanner(admob.BannerSize.BANNER, admob.Position.BOTTOM_APP);
+	    
 	//alert('end of ready');
     },
 
